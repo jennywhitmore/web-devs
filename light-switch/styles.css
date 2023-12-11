@@ -1,0 +1,101 @@
+body {
+  --acent-color: orange;
+  --background-color: white;
+  --text-color: black;
+  --button-text-color: var(--background-color);
+  --transition-delay: 1s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden; /*takes away scrollbar due to large container of sun and moon*/
+
+  transition: var(--transition-delay);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+p {
+  margin: 0;
+}
+
+body.dark {
+  --acent-color: rgba(138, 180, 206, 0.868);
+  --background-color: #333;
+  --text-color: white;
+  --button-text-color: #333;
+}
+
+.toggleButton {
+  background-color: var(--acent-color);
+  color: var(--button-text-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5em;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  border: none;
+  outline: none;
+  transition: var(--transition-delay);
+  transform: scale(1);
+}
+
+.toggleButton:hover,
+.toggleButton:focus {
+  transform: scale(1.1);
+}
+
+.sun-moon-container {
+  --rotation: 0;
+
+  position: absolute;
+  pointer-events: none; /*makes the whole container invisible for button interaction*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  height: 200vmin;
+  transform: rotate(var(--rotation));
+  transition: transform var(--transition-delay);
+}
+
+.dark .sun-moon-container {
+  --rotation: 180deg;
+}
+
+.sun,
+.moon {
+  position: absolute;
+  transition: opacity, fill, var(--transition-delay);
+  width: 30px;
+  height: 30px;
+  fill: var(--acent-color);
+}
+
+.sun {
+  top: 5%;
+  opacity: 1;
+}
+
+.dark .sun {
+  opacity: 0;
+}
+
+.moon {
+  bottom: 5%;
+  opacity: 0;
+  transform: rotate(180deg);
+}
+
+.dark .moon {
+  opacity: 1;
+}
