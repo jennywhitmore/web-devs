@@ -15,4 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
       siteTitle.textContent = "Good Night";
     }
   });
+  toggleButton.addEventListener("mouseover", function () {
+    toggleButton.style.cursor = "pointer";
+  });
+  toggleButton.addEventListerner("mouseout", function () {
+    toggleButton.style.cursor = "auto";
+  });
 });
