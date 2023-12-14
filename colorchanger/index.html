@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Color Mixer</title>
+</head>
+
+<body>
+    <header>
+        <h1>Color Mixer</h1>
+        <label class="redLabel" for="redSlider">Red</label>
+        <input type="range" id="redSlider" class="slider" min="0" max="255" value="0">
+
+        <label class="greenLabel" for="greenSlider">Green</label>
+        <input type="range" id="greenSlider" class="slider" min="0" max="255" value="0">
+
+        <label class="blueLabel" for="blueSlider">Blue</label>
+        <input type="range" id="blueSlider" class="slider" min="0" max="255" value="0">
+
+        <div class="color-value">#000000</div>
+    </header>
+    <div class="color-app">
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
