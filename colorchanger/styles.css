@@ -34,18 +34,15 @@ header > * + * {
 
 h1 {
   margin: 2rem;
-font-size: 2.5rem;
-padding-left: 5rem;
-
+  font-size: 2.5rem;
+  padding-left: 5rem;
 }
-.divContainer{
-  margin: 0
+.divContainer {
+  margin: 0;
 }
-
 
 .slider {
   margin: 0 10px;
-  
 }
 
 .color-field {
@@ -86,22 +83,3 @@ input#greenSlider {
 input#blueSlider {
   accent-color: blue;
 }
-
-/*MediaQuery-Section*/
-
-@media screen and (min-width: 600px) {
-  header {
-    flex-direction: row;
-    align-items: baseline;
-    gap: 2rem;
-  }
-
-  header > * + * {
-    margin-top: unset !important;
-  }
-
-  @media screen and (min-width: 600px) {
-    .color-value {
-      margin-left: auto;
-    }
-  }
