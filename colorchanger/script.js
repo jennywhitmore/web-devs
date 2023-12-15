@@ -7,7 +7,7 @@ const colorApp = document.querySelector(".color-field");
 
 // Function to update the color based on the slider values
 function updateColor() {
-  const redValue = redSlider.value;
+  const redValue = redSlider.value; //call html value of each slider. the value property is set in the element and contains a number from 0 to 255.
   const greenValue = greenSlider.value;
   const blueValue = blueSlider.value;
 
@@ -18,7 +18,7 @@ function updateColor() {
   colorApp.style.backgroundColor = `rgb(${redValue},${greenValue},${blueValue})`;
 }
 
-// Add input event listener to all Sliders
+// Add input event listener to all Sliders in order to recognize slider changing
 redSlider.addEventListener("input", updateColor);
 greenSlider.addEventListener("input", updateColor);
 blueSlider.addEventListener("input", updateColor);
