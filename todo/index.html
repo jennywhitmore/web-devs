@@ -2,20 +2,53 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy: script-scr 'self' 'unsafe-eval';">
-    <title>first-todo-app</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600&family=Love+Ya+Like+A+Sister&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Todo App</title>
 </head>
 
+<header>
+    <div class="h1">
+        <h1> My Daily Tasks</h1>
+    </div>
+    <div>
+        <img src="assets/todo-title.png" alt="ToDo List">
+    </div>
+</header>
+
 <body>
-    <form>
-        <input type="text" id="userInput">
-        <Button type="submit">Add</Button>
-    </form>
-    <ul id="list">
-    </ul>
+    <div class="todoContainer">
+        <ul id="todo-list"></ul>
+    </div>
+    <div class="interfaceContainer">
+        <div class="inputAndButtons">
+            <label for="todo-input">New: </label>
+            <input id="todo-input" type="text" />
+            <button id="add" type="submit">Add</button>
+            <button id="clear-done" type="submit">X Done</button>
+        </div>
+        <form>
+            <fieldset>
+                <legend>Filter by:</legend>
+
+                <input class="radio" type="radio" name=radio id="all" checked />
+                <label for="all">All</label>
+
+                <input class="radio" type="radio" name=radio id="still" />
+                <label for="still">Still up</label>
+
+                <input class="radio" type="radio" name=radio id="done" />
+                <label for="done">Done</label>
+            </fieldset>
+        </form>
+    </div>
+
     <script src="script.js"></script>
 </body>
 
