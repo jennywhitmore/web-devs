@@ -1,5 +1,3 @@
-//This script is not embedded into the html. It is an alternative way of creating random colors without using the fetch api.//
-
 // Select the Sliders using querySelector
 const redSlider = document.querySelector("#redSlider");
 const greenSlider = document.querySelector("#greenSlider");
@@ -21,25 +19,30 @@ function updateColor() {
   colorApp.style.backgroundColor = `rgb(${redValue},${greenValue},${blueValue})`;
 }
 
-//Function that creates random RGB Values
-function randomColor() {
-  const randomRed = Math.floor(Math.random() * 256);
-  const randomGreen = Math.floor(Math.random() * 256);
-  const randomBlue = Math.floor(Math.random() * 256);
-
-  redSlider.value = randomRed;
-  greenSlider.value = randomGreen;
-  blueSlider.value = randomBlue;
-
-  updateColor();
+// Function to fetch a random color from the API
+function fetchRandomColor() {
+  fetch("https://dummy-apis.netlify.app/api/color")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Bad Network response");
+      }
+      return response.json();
+    })
+    //Use the fetched color to directly change the display color
+    .then((data) => {
+      colorValue.textContent = `RGB: ${data.color}`;
+      colorApp.style.backgroundColor = data.color;
+    })
+    .catch((error) => {
+      console.error(`Failed to fetch color:`, error);
+    });
 }
 
-// Add input event listener to all Sliders in order to recognize slider changing
-//randomButton.addEventListener("click", randomColor);
+// Add input event listener to all Sliders and buttons as to recognize slider changing or button click
 redSlider.addEventListener("input", updateColor);
 greenSlider.addEventListener("input", updateColor);
 blueSlider.addEventListener("input", updateColor);
-randomButton.addEventListener("click", randomColor);
+randomButton.addEventListener("click", fetchRandomColor);
 
 // Call the program
 updateColor();

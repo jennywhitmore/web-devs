@@ -22,7 +22,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 2rem;
+  padding: 5rem;
   background-color: whitesmoke;
   font-family: monospace;
   font-size: 1rem;
@@ -55,6 +55,7 @@ h1 {
 
 .color-value {
   padding-top: 1rem;
+  padding-bottom: 1rem;
   font-size: 1.2rem;
   margin: 0;
   width: 250px;
@@ -82,4 +83,10 @@ input#greenSlider {
 
 input#blueSlider {
   accent-color: blue;
+}
+
+#random-button {
+  padding: 0.5rem;
+  font-family: monospace;
+  border-radius: 5px;
 }
