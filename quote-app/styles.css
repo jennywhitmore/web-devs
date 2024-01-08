@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+}
+main {
+  box-sizing: border-box;
+  font-family: monospace;
+  margin: 2rem;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem;
+  background-color: thistle;
+  font-family: monospace;
+  font-size: 1rem;
+  gap: 2rem;
+  box-sizing: border-box;
+  font-family: monospace;
+  margin: 0rem;
+  border: 0;
+}
+
+button {
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-family: monospace;
+  font-weight: bold;
+  padding: 10px;
+  background-color: rgb(185, 174, 227);
+  box-shadow: 2px 4px 4px 0px rgb(72, 60, 89);
+}
+
+p {
+  font-size: 14px;
+}
+
+.author {
+  font-style: italic;
+}
