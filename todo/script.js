@@ -56,6 +56,7 @@ function createTodoItem(text, checked) {
 
   listItem.addEventListener("click", function () {
     listItem.classList.toggle("checked");
+    saveState();
   });
   return listItem;
 }
