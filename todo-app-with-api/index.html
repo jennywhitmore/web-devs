@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600&family=Love+Ya+Like+A+Sister&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Todo App with Api</title>
+</head>
+
+<body>
+    <header>
+        <div class="h1">
+            <h1> My Daily Tasks</h1>
+        </div>
+        <div>
+            <img src="assets/todo-title.png" alt="ToDo List">
+        </div>
+    </header>
+
+    <div class="todo-container">
+        <ul class="todo-list"></ul>
+    </div>
+    <div class="interface-container">
+        <form id="new-todo-form">
+            <label for="new-todo">Task:</label>
+            <input type="text" id="new-todo" />
+            <button id="btn-add" type="submit" class="button">Add</button>
+        </form>
+        <p>
+            <button id="btn-select-all" class="button">Select All</button>
+            <button id="btn-delete" class="button">Kill Done</button>
+        </p>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
